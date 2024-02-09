@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DataSets</title>
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="box">
+      <ul class="container">
+          <li class="tab one"><a href="#tabOne" class="link" data-title="tabOne">Точное время</a></li>
+          <li class="tab two"><a href="#" class="link" data-title="tabTwo">Таймер</a></li>
+          <li class="tab three"><a href="#" class="link" data-title="tabThree">Секундомер</a></li>          
+      </ul>
+      <div class="content">
+          <div id="tabOne" class="tab-content one">
+            <div class="text__hms">Минск, +3 часа к Гринвичу</div>
+            <div class="hms"></div>
+            <div class="btn_hms">
+              <button type="submit" class="btn btn__active">Минск</button>
+              <button type="submit" class="btn">Токио</button>
+              <button type="submit" class="btn">Пекин</button>
+              <button type="submit" class="btn">Буэнос-Айрес</button>
+              <button type="submit" class="btn">Нью-Йорк</button>
+              <button type="submit" class="btn">Лондон</button>
+            </div>
+            <div class="img_hms">
+             <img class="imgOfSities" src="../assets/images/minsk.png">
+            </div>
+          </div>
+
+
+          <div id="tabTwo" class="tab-content two">
+            <div class="container__timer">
+              <div class="btn__nav-up">
+                <button onclick="changeTime(event, 1)" data-type="hours" class="btn__hours btn__nav-dis">&#2017;</button>
+                <button onclick="changeTime(event, 1)" data-type="minutes" class="btn__minutes btn__nav-dis">&#2017;</button>
+                <button onclick="changeTime(event, 1)" data-type="seconds" class="btn__seconds btn__nav-dis">&#2017;</button>
+              </div>
+              <div class="timer_box">00:00:00</div>
+              <div class="btn__nav-up">
+                <button onclick="changeTime(event, -1)" data-type="hours" class="btn__hours btn__nav-dis">&#2012;</button>
+                <button onclick="changeTime(event, -1)" data-type="minutes" class="btn__minutes btn__nav-dis">&#2012;</button>
+                <button onclick="changeTime(event, -1)" data-type="seconds" class="btn__seconds btn__nav-dis">&#2012;</button>
+              </div>
+              <div class="btn_timerButton">
+                <button type="submit" class="btn__timer"></button>
+                <button type="submit" class="btn__timer-reset">&#8635;</button>
+              </div>
+            </div>     
+          </div>
+
+
+          <div id="tabThree" class="tab-content three">
+            <div class="container__seconder">
+              <div class="time_second">
+                <span class="interval-second js-min">00</span>
+                <span class="interval-colon">:</span>
+                <span class="interval-second js-sec">00</span>
+                <span class="interval-colon">:</span>
+                <span class="interval-second js-mlsec">00</span>
+              </div>
+              <div class="btn_seconder">
+                <button type="submit" class="btn__second">Пуск</button>
+              </div>
+            </div>            
+          </div>
+          
+      </div>
+  </div>
+  <script src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/tabs.js"></script>
+  <script src="../js/timer.js"></script>
+  <script src="../js/seconder.js"></script>
+</body>
+</html>
